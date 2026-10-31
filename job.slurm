@@ -1,12 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=logsigma
-#SBATCH --output=output.log
-#SBATCH --error=error.log
-#SBATCH --time=02:00:00
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
-#SBATCH --mem=16G
-#SBATCH --cpus-per-task=4
+#SBATCH --partition=gpu4090
+#SBATCH --qos=4gpus
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:4
+#SBATCH --output=logsigma.out
+#SBATCH --error=logsigma.err
 
-source myenv/bin/activate
-python main_logsigma.py
+module load cuda/12.4
+conda activate dimabsa
+python3 main_logsigma.py
