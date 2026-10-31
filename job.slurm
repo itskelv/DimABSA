@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=notebook_job
+#SBATCH --job-name=logsigma
 #SBATCH --output=output.log
 #SBATCH --error=error.log
 #SBATCH --time=02:00:00
@@ -9,4 +9,4 @@
 #SBATCH --cpus-per-task=4
 
 source myenv/bin/activate
-python SentimentAnalysis.py
+python main_logsigma.py
