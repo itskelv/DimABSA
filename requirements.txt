@@ -1,0 +1,8 @@
+scikit-learn
+pandas
+numpy
+transformers
+scipy
+tqdm
+requests
+torch>=2.3.0
