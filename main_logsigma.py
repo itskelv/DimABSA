@@ -91,16 +91,13 @@ predict_df = jsonl_to_df(predict_raw)
 # split 10% for dev
 train_df, dev_df = train_test_split(train_df, test_size=0.1, random_state=42)
 
-from IPython.display import display, Markdown
+def show(title, df):
+    print(f"\n=== {lang}_{domain} {title} ===")
+    print(df.head().to_string())
 
-display(Markdown(f"### {lang}_{domain} train_df"))
-display(train_df.head())
-
-display(Markdown(f"### {lang}_{domain} dev_df"))
-display(dev_df.head())
-
-display(Markdown(f"### {lang}_{domain} predict_df"))
-display(predict_df.head())
+show("train_df", train_df)
+show("dev_df", dev_df)
+show("predict_df", predict_df)
 
 class VADataset(Dataset):
     '''
