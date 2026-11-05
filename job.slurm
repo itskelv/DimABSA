@@ -9,11 +9,6 @@
 #SBATCH --output=logsigma.out
 #SBATCH --error=logsigma.err
 
-source ~/.bashrc
-source "$(conda info --base)/etc/profile.d/conda.sh"
+module load cuda/12.1
 conda activate dimabsa
-export PYTHONNOUSERSITE=1
-
-which python
-python --version
-python -u main_logsigma.py
+python3 main_logsigma.py
