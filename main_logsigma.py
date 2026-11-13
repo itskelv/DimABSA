@@ -28,10 +28,12 @@ def load_jsonl_url(url: str) -> List[Dict]:
 
 task = "task1"#don't change
 lang = "eng" #chang the language you want to test
-domain = "laptop" #change what domain you want to test
+domain = "restaurant" #change what domain you want to test
 
 train_url = f"dataset/{lang}/{lang}_{domain}_train_alltasks.jsonl"
 predict_url = f"dataset/{lang}/{lang}_{domain}_dev_{task}.jsonl"
+
+print(train_url)
 
 #model config
 model_name = "cardiffnlp/twitter-roberta-large-topic-sentiment-latest"
@@ -162,7 +164,6 @@ class LogSigmaRegressor(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.fc_v = nn.Linear(hidden, 1)   # CHANGED: was one Linear(hidden, 2)
         self.fc_a = nn.Linear(hidden, 1)
-        # my addition (not in the paper): start predictions at the middle of the 1-9 scale
         for fc in (self.fc_v, self.fc_a):
             nn.init.constant_(fc.bias, 5.0)
         # s = log(u), u ~ Uniform(0.2, 1.0)  (paper, Sec 3.2)
