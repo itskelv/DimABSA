@@ -6,9 +6,9 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:4
-#SBATCH --output=logsigma3.out
-#SBATCH --error=logsigma3.err
+#SBATCH --output=logsigma_marker3.out
+#SBATCH --error=logsigma_marker3.err
 
 module load cuda/12.1
 conda activate dimabsa
-python3 main_logsigma.py
+python3 main_logsigma_marker.py
