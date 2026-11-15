@@ -30,7 +30,7 @@ task = "task1"#don't change
 lang = "jpn" #chang the language you want to test
 domain = "finance" #change what domain you want to test
 
-train_url = f"dataset/{lang}/{lang}_{domain}_train_alltasks.jsonl"
+train_url = f"dataset/{lang}/{lang}_{domain}_train_task1.jsonl"
 predict_url = f"dataset/{lang}/{lang}_{domain}_dev_{task}.jsonl"
 
 print(train_url)
