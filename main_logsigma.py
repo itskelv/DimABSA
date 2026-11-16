@@ -28,9 +28,9 @@ def load_jsonl_url(url: str) -> List[Dict]:
 
 task = "task1"#don't change
 lang = "jpn" #chang the language you want to test
-domain = "finance" #change what domain you want to test
+domain = "hotel" #change what domain you want to test
 
-train_url = f"dataset/{lang}/{lang}_{domain}_train_task1.jsonl"
+train_url = f"dataset/{lang}/{lang}_{domain}_train_alltasks.jsonl"
 predict_url = f"dataset/{lang}/{lang}_{domain}_dev_{task}.jsonl"
 
 print(train_url)
