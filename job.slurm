@@ -6,8 +6,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:4
-#SBATCH --output=logsigma5.out
-#SBATCH --error=logsigma5.err
+#SBATCH --output=logsigmajpnfin.out
+#SBATCH --error=logsigmajpnfin.err
 
 module load cuda/12.1
 conda activate dimabsa
