@@ -37,7 +37,7 @@ print(train_url)
 
 # --- model / training config ---
 # model_name = "cardiffnlp/twitter-roberta-large-topic-sentiment-latest"
-model_name = "cl-tohoku/bert-japanese"
+model_name = "tohoku-nlp/bert-base-japanese-v3"
 # model_name = "DeepPavlov/rubert-base-cased"
 # model_name = "youscan/ukr-roberta-base"
 # model_name = "hfl/chinese-roberta-wwm-ext"
