@@ -27,17 +27,17 @@ def load_jsonl_url(url: str) -> List[Dict]:
     return [json.loads(line) for line in resp.text.splitlines()]
 
 task = "task1"#don't change
-lang = "jpn" #chang the language you want to test
-domain = "finance" #change what domain you want to test
+lang = "eng" #chang the language you want to test
+domain = "laptop" #change what domain you want to test
 
-train_url = f"dataset/{lang}/{lang}_{domain}_train_task1.jsonl"
+train_url = f"dataset/{lang}/{lang}_{domain}_train_alltasks.jsonl"
 predict_url = f"dataset/{lang}/{lang}_{domain}_dev_{task}.jsonl"
 
 print(train_url)
 
 # --- model / training config ---
-# model_name = "cardiffnlp/twitter-roberta-large-topic-sentiment-latest"
-model_name = "tohoku-nlp/bert-base-japanese-v3"
+model_name = "cardiffnlp/twitter-roberta-large-topic-sentiment-latest"
+# model_name = "tohoku-nlp/bert-base-japanese-v3"
 # model_name = "DeepPavlov/rubert-base-cased"
 # model_name = "youscan/ukr-roberta-base"
 # model_name = "hfl/chinese-roberta-wwm-ext"
@@ -52,7 +52,7 @@ accum_steps = 4
 warmup_ratio = 0.1     
 clip_norm = 1.0        
 dropout = 0.1
-max_len = 256          
+max_len = 128         
 seeds = [21, 99, 42]   
 
 use_aspect_marker = True
