@@ -6,8 +6,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:4
-#SBATCH --output=logsigma_marker_eng_laptop.out
-#SBATCH --error=logsigma_marker_eng_laptop.err
+#SBATCH --output=logsigma_marker_eng_restaurant.out
+#SBATCH --error=logsigma_marker_eng_restaurant.err
 
 module load cuda/12.1
 conda activate dimabsa
